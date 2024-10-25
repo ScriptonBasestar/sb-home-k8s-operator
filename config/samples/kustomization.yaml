@@ -5,4 +5,5 @@ resources:
 - core_v1alpha1_coredns.yaml
 - cache_v1alpha1_memcached.yaml
 - cache_v1alpha1_redis.yaml
+- devsec_v1alpha1_vault.yaml
 #+kubebuilder:scaffold:manifestskustomizesamples

@@ -1,0 +1,9 @@
+apiVersion: devsec.scriptonbasestar.com/v1alpha1
+kind: Vault
+metadata:
+  labels:
+    app.kubernetes.io/name: operator-k8s-home
+    app.kubernetes.io/managed-by: kustomize
+  name: vault-sample
+spec:
+  # TODO(user): Add fields here

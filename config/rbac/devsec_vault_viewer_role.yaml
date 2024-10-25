@@ -1,0 +1,23 @@
+# permissions for end users to view vaults.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: operator-k8s-home
+    app.kubernetes.io/managed-by: kustomize
+  name: devsec-vault-viewer-role
+rules:
+- apiGroups:
+  - devsec.scriptonbasestar.com
+  resources:
+  - vaults
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - devsec.scriptonbasestar.com
+  resources:
+  - vaults/status
+  verbs:
+  - get

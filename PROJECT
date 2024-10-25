@@ -57,4 +57,13 @@ resources:
   kind: Redis
   path: github.com/scriptonbasestar/sb-home-k8s-operator/api/cache/v1alpha1
   version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: scriptonbasestar.com
+  group: devsec
+  kind: Vault
+  path: github.com/scriptonbasestar/sb-home-k8s-operator/api/devsec/v1alpha1
+  version: v1alpha1
 version: "3"
