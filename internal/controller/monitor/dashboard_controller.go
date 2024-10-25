@@ -25,12 +25,22 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
 	monitorv1alpha1 "github.com/scriptonbasestar/sb-home-k8s-operator/api/monitor/v1alpha1"
+	helm_helper "github.com/scriptonbasestar/sb-home-k8s-operator/helper"
 )
 
 // DashboardReconciler reconciles a Dashboard object
 type DashboardReconciler struct {
 	client.Client
 	Scheme *runtime.Scheme
+	Chart  Chart
+}
+
+type Chart struct {
+	RepoUrl      string
+	RepoName     string
+	ChartName    string
+	ChartVersion string
+	AppVersion   string
 }
 
 //+kubebuilder:rbac:groups=monitor.scriptonbasestar.com,resources=dashboards,verbs=get;list;watch;create;update;patch;delete
@@ -59,4 +69,13 @@ func (r *DashboardReconciler) SetupWithManager(mgr ctrl.Manager) error {
 	return ctrl.NewControllerManagedBy(mgr).
 		For(&monitorv1alpha1.Dashboard{}).
 		Complete(r)
+}
+
+func (r *DashboardReconciler) Init(mgr ctrl.Manager) error {
+	repoUrl := "https://kubernetes.github.io/dashboard/"
+	repoName := "kubernetes-dashboard"
+	chartName := "kubernetes-dashboard"
+	chartVersion := "4.0.0"
+	//appVersion := "2.3.0"
+	return helm_helper.PullHelmChart(repoUrl, repoName, chartName, chartVersion)
 }
