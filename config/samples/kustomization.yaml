@@ -3,4 +3,5 @@ resources:
 - core_v1alpha1_traefik.yaml
 - core_v1alpha1_certmanager.yaml
 - core_v1alpha1_coredns.yaml
+- cache_v1alpha1_memcached.yaml
 #+kubebuilder:scaffold:manifestskustomizesamples
