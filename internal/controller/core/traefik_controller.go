@@ -18,6 +18,7 @@ package core
 
 import (
 	"context"
+	"github.com/go-logr/logr"
 
 	"k8s.io/apimachinery/pkg/runtime"
 	ctrl "sigs.k8s.io/controller-runtime"
@@ -59,7 +60,5 @@ func (r *TraefikReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ct
 func (r *TraefikReconciler) SetupWithManager(mgr ctrl.Manager) error {
 	return ctrl.NewControllerManagedBy(mgr).
 		For(&corev1alpha1.Traefik{}).
-		Owns(&corev1.Service{}).
-		Owns(&appsv1.Deployment{}).
 		Complete(r)
 }
