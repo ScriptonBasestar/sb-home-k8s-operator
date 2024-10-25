@@ -6,4 +6,5 @@ resources:
 - cache_v1alpha1_memcached.yaml
 - cache_v1alpha1_redis.yaml
 - devsec_v1alpha1_vault.yaml
+- monitor_v1alpha1_prometheus.yaml
 #+kubebuilder:scaffold:manifestskustomizesamples

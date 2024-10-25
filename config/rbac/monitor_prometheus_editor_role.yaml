@@ -1,0 +1,27 @@
+# permissions for end users to edit prometheuses.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: sb-home-k8s-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: monitor-prometheus-editor-role
+rules:
+- apiGroups:
+  - monitor.scriptonbasestar.com
+  resources:
+  - prometheuses
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - monitor.scriptonbasestar.com
+  resources:
+  - prometheuses/status
+  verbs:
+  - get
