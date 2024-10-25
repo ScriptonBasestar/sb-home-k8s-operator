@@ -2,7 +2,7 @@ apiVersion: cache.scriptonbasestar.com/v1alpha1
 kind: Memcached
 metadata:
   labels:
-    app.kubernetes.io/name: operator-k8s-home
+    app.kubernetes.io/name: sb-home-k8s-operator
     app.kubernetes.io/managed-by: kustomize
   name: memcached-sample
 spec:

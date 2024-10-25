@@ -28,8 +28,8 @@ BUNDLE_METADATA_OPTS ?= $(BUNDLE_CHANNELS) $(BUNDLE_DEFAULT_CHANNEL)
 # This variable is used to construct full image tags for bundle and catalog images.
 #
 # For example, running 'make bundle-build bundle-push catalog-build catalog-push' will build and push both
-# scriptonbasestar.com/operator-k8s-home-bundle:$VERSION and scriptonbasestar.com/operator-k8s-home-catalog:$VERSION.
-IMAGE_TAG_BASE ?= scriptonbasestar.com/operator-k8s-home
+# scriptonbasestar.com/sb-home-k8s-operator-bundle:$VERSION and scriptonbasestar.com/sb-home-k8s-operator-catalog:$VERSION.
+IMAGE_TAG_BASE ?= scriptonbasestar.com/sb-home-k8s-operator
 
 # BUNDLE_IMG defines the image:tag used for the bundle.
 # You can use it as an arg. (E.g make bundle-build BUNDLE_IMG=<some-registry>/<project-name-bundle>:<tag>)

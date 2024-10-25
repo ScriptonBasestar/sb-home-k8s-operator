@@ -27,7 +27,7 @@ import (
 	"github.com/scriptonbasestar/sb-home-k8s-operator/test/utils"
 )
 
-const namespace = "operator-k8s-home-system"
+const namespace = "sb-home-k8s-operator-system"
 
 var _ = Describe("controller", Ordered, func() {
 	BeforeAll(func() {
@@ -60,7 +60,7 @@ var _ = Describe("controller", Ordered, func() {
 			var err error
 
 			// projectimage stores the name of the image used in the example
-			var projectimage = "example.com/operator-k8s-home:v0.0.1"
+			var projectimage = "example.com/sb-home-k8s-operator:v0.0.1"
 
 			By("building the manager(Operator) image")
 			cmd := exec.Command("make", "docker-build", fmt.Sprintf("IMG=%s", projectimage))

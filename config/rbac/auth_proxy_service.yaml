@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     control-plane: controller-manager
-    app.kubernetes.io/name: operator-k8s-home
+    app.kubernetes.io/name: sb-home-k8s-operator
     app.kubernetes.io/managed-by: kustomize
   name: controller-manager-metrics-service
   namespace: system
