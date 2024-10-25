@@ -20,6 +20,8 @@ resources:
 # default, aiding admins in cluster management. Those roles are
 # not used by the Project itself. You can comment the following lines
 # if you do not want those helpers be installed with your Project.
+- cache_redis_editor_role.yaml
+- cache_redis_viewer_role.yaml
 - cache_memcached_editor_role.yaml
 - cache_memcached_viewer_role.yaml
 - core_coredns_editor_role.yaml

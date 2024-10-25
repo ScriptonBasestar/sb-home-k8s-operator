@@ -6,6 +6,7 @@ resources:
 - bases/core.scriptonbasestar.com_certmanagers.yaml
 - bases/core.scriptonbasestar.com_coredns.yaml
 - bases/cache.scriptonbasestar.com_memcacheds.yaml
+- bases/cache.scriptonbasestar.com_redis.yaml
 #+kubebuilder:scaffold:crdkustomizeresource
 
 patches:
@@ -19,6 +20,7 @@ patches:
 #- path: patches/cainjection_in_core_certmanagers.yaml
 #- path: patches/cainjection_in_core_coredns.yaml
 #- path: patches/cainjection_in_cache_memcacheds.yaml
+#- path: patches/cainjection_in_cache_redis.yaml
 #+kubebuilder:scaffold:crdkustomizecainjectionpatch
 
 # [WEBHOOK] To enable webhook, uncomment the following section
