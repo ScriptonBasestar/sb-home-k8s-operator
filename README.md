@@ -42,3 +42,22 @@ helm을 안쓴 이유
 - [ ] harbor
 - [ ] argocd
 - [ ] airflow
+
+operator
+- gitlab
+- gogs
+- gitea
+- wordpress
+- vault
+
+helm
+- traefik
+- cert-manager
+- coredns
+- argocd
+
+internal
+- proxynd
+
+???
+- harbor
