@@ -11,4 +11,14 @@ plugins:
   scorecard.sdk.operatorframework.io/v2: {}
 projectName: operator-k8s-home
 repo: github.com/scriptonbasestar/sb-home-k8s-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: scriptonbasestar.com
+  group: core
+  kind: Traefik
+  path: github.com/scriptonbasestar/sb-home-k8s-operator/api/core/v1alpha1
+  version: v1alpha1
 version: "3"

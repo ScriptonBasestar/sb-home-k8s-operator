@@ -1,0 +1,9 @@
+apiVersion: core.scriptonbasestar.com/v1alpha1
+kind: Traefik
+metadata:
+  labels:
+    app.kubernetes.io/name: operator-k8s-home
+    app.kubernetes.io/managed-by: kustomize
+  name: traefik-sample
+spec:
+  # TODO(user): Add fields here
