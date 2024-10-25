@@ -1,0 +1,23 @@
+# permissions for end users to view certmanagers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: operator-k8s-home
+    app.kubernetes.io/managed-by: kustomize
+  name: core-certmanager-viewer-role
+rules:
+- apiGroups:
+  - core.scriptonbasestar.com
+  resources:
+  - certmanagers
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - core.scriptonbasestar.com
+  resources:
+  - certmanagers/status
+  verbs:
+  - get
