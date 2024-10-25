@@ -9,6 +9,7 @@ resources:
 - bases/cache.scriptonbasestar.com_redis.yaml
 - bases/devsec.scriptonbasestar.com_vaults.yaml
 - bases/monitor.scriptonbasestar.com_prometheuses.yaml
+- bases/monitor.scriptonbasestar.com_dashboards.yaml
 #+kubebuilder:scaffold:crdkustomizeresource
 
 patches:
@@ -25,6 +26,7 @@ patches:
 #- path: patches/cainjection_in_cache_redis.yaml
 #- path: patches/cainjection_in_devsec_vaults.yaml
 #- path: patches/cainjection_in_monitor_prometheuses.yaml
+#- path: patches/cainjection_in_monitor_dashboards.yaml
 #+kubebuilder:scaffold:crdkustomizecainjectionpatch
 
 # [WEBHOOK] To enable webhook, uncomment the following section

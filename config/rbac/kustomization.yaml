@@ -20,6 +20,8 @@ resources:
 # default, aiding admins in cluster management. Those roles are
 # not used by the Project itself. You can comment the following lines
 # if you do not want those helpers be installed with your Project.
+- monitor_dashboard_editor_role.yaml
+- monitor_dashboard_viewer_role.yaml
 - monitor_prometheus_editor_role.yaml
 - monitor_prometheus_viewer_role.yaml
 - devsec_vault_editor_role.yaml
