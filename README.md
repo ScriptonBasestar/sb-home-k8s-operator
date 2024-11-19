@@ -38,6 +38,7 @@
 - [ ] harbor
 - [ ] argocd
 - [ ] airflow
+- [ ] adguard operator
 
 operator
 - gitlab
